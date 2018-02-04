@@ -1,0 +1,17 @@
+{
+  "name": "typescript-api",
+  "version": "0.1.0",
+  "description": "A Node/Express API written in TypeScript",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jordomav/typescript-api"
+  },
+  "author": "Jordan Mavrogeorge",
+  "license": "MIT",
+  "scripts": {
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}
