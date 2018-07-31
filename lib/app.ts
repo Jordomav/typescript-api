@@ -1,13 +1,13 @@
-import * as express from "express";
 import * as bodyParser from "body-parser";
-import * as passport from "passport";
+import * as express from "express";
+// import * as passport from "passport";
 import { Router } from "./router/router";
 
 class App {
 
     public app: express.Application;
     public routing: Router = new Router();
-    public passport: passport;
+    // public passport: passport;
 
     constructor() {
         this.app = express();
@@ -17,8 +17,8 @@ class App {
 
     private config(): void{
         this.app.use(bodyParser.json());
-        this.app.use(this.passport.initialize());
-        this.passport.use();
+        // this.app.use(this.passport.initialize());
+        // this.passport.use();
         this.app.use(bodyParser.urlencoded({ extended: false }));
     }
 
