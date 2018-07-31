@@ -1,26 +1,26 @@
-import * as mongoose from 'mongoose';
+import * as mongoose from "mongoose";
 
 const Schema = mongoose.Schema;
 
 export const UserSchema = new Schema({
-    firstName: {
-        type: String,
-        required: 'Enter a first name'
-    },
-    lastName: {
-        type: String,
-        required: 'Enter a first name'
+    created_date: {
+        default: Date.now,
+        type: Date,
     },
     email: {
+        index: true,
         type: String,
         unique: true,
-        index: true        
+    },
+    firstName: {
+        required: "Enter a first name",
+        type: String,
+    },
+    lastName: {
+        required: "Enter a first name",
+        type: String,
     },
     password: {
-        type: String            
+        type: String,
     },
-    created_date: {
-        type: Date,
-        default: Date.now
-    }
 });

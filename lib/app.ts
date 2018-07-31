@@ -1,7 +1,7 @@
 import * as bodyParser from "body-parser";
 import * as express from "express";
 // import * as passport from "passport";
-import { Router } from "./router/router";
+import { Router } from "./modules/router";
 
 class App {
 
