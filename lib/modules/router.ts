@@ -7,11 +7,12 @@ export class Router {
 
   public build(app: any): void {
     app.route("/").get((req: Request, res: Response) => {
-    res.send("API Up");
+      res.send("API Up");
     });
+
     app.route("/postUser").post(this.userController.addUser);
     app.route("/userLogin").post(this.userController.userLogin);
-
     app.route("/user/:id").get(this.userController.getUser);
+    app.route("/getUsers").get(this.userController.getAllUsers);
     }
 }
