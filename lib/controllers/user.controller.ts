@@ -41,4 +41,14 @@ export class UserController {
          res.send(users);
       });
   }
+  
+  public removeUser(req: Request, res: Response) {
+    User.remove({_id: req.params.id}, (err, user) => {
+    if (err) {
+      res.send(err);
+    } else {
+      res.json({message: "User was deleted"});
+    }
+    });
+  }
 }

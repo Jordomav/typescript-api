@@ -14,5 +14,6 @@ export class Router {
     app.route("/userLogin").post(this.userController.userLogin);
     app.route("/user/:id").get(this.userController.getUser);
     app.route("/getUsers").get(this.userController.getAllUsers);
+    app.route("/delete/user/:id").delete(this.userController.removeUser);
     }
 }
